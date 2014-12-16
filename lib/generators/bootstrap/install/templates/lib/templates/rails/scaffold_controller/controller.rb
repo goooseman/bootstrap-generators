@@ -9,7 +9,7 @@ class <%= controller_class_name %>Controller < ApplicationController
   # GET <%= route_url %>
   def index
     @<%= plural_table_name %> = <%= orm_class.all(class_name) %>
-    @<%= singular_table_name %> = <%= orm_class.all(class_name).new %>
+    @<%= singular_table_name %> = <%= orm_class.build(class_name) %>
   end
 
   # GET <%= route_url %>/1
